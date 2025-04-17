@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(getCurrentPrediction, 5000);
 });
 
-const NGROK_BASE_URL = 'https://f771-223-187-123-96.ngrok-free.app';
+const NGROK_BASE_URL = 'https://url.ngrok-free.app';
 
 async function getCurrentPrediction() {
     try {
