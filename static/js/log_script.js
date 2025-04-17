@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const socket = io('https://f771-223-187-123-96.ngrok-free.app', {
+    const socket = io('https://url.ngrok-free.app', {
         transports: ['websocket', 'polling'],
         secure: true,
         rejectUnauthorized: false,
