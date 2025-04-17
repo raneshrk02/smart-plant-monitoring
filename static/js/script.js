@@ -1,4 +1,4 @@
-const NGROK_BASE_URL = 'https://f771-223-187-123-96.ngrok-free.app';
+const NGROK_BASE_URL = 'https://url.ngrok-free.app';
 
 document.addEventListener("DOMContentLoaded", () => {
     const alertsContainer = document.createElement('div');
