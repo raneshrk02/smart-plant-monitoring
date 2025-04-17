@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Plant Health Predictions</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Plant Health Predictions</h1>
+            <button onclick="window.location.href='/'">Back to Dashboard</button>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>Current Prediction</h2>
+            <div class="last-update" id="lastPredictionUpdate">Last Updated: Never</div>
+            <div class="prediction-status" id="currentPrediction">
+                <div class="prediction-value">Loading...</div>
+                <div class="prediction-confidence" id="predictionConfidence"></div>
+            </div>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>Current Sensor Values</h2>
+            <div id="featureChart"></div>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>24-Hour History</h2>
+            <div id="historyChart"></div>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>Health Status Distribution</h2>
+            <div id="healthDistribution" class="chart-container"></div>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>Parameter Correlation</h2>
+            <div id="correlationMatrix" class="chart-container"></div>
+        </div>
+    </div>
+
+    <script src="/static/js/predictions.js"></script>
+</body>
+</html> 

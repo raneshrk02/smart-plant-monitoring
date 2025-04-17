@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Plant Monitoring Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Plant Monitoring Dashboard</h1>
+            <div class="button-group">
+                <button onclick="goToLogs()">View Logs</button>
+                <button onclick="window.location.href='/predictions'">View Predictions</button>
+            </div>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>Current Readings</h2>
+            <div class="last-update" id="lastUpdate">Last Updated: Never</div>
+            <div class="sensor-grid">
+                <div class="sensor-item">
+                    <div class="sensor-label">Soil Moisture</div>
+                    <div class="sensor-value" id="soilMoisture">N/A%</div>
+                    <div class="sensor-status">Threshold: 30%</div>
+                </div>
+                <div class="sensor-item">
+                    <div class="sensor-label">Temperature</div>
+                    <div class="sensor-value" id="temperature">N/A°C</div>
+                    <div class="sensor-status">Threshold: 35°C</div>
+                </div>
+                <div class="sensor-item">
+                    <div class="sensor-label">Humidity</div>
+                    <div class="sensor-value" id="humidity">N/A%</div>
+                    <div class="sensor-status">Threshold: 40%</div>
+                </div>
+                <div class="sensor-item">
+                    <div class="sensor-label">Light Intensity</div>
+                    <div class="sensor-value" id="light">N/A</div>
+                    <div class="sensor-status">Threshold: 1560 lux</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>System Control</h2>
+            <div class="button-group">
+                <button onclick="toggleActuator('water_pump')" id="water_pumpBtn">
+                    <span class="status-indicator" id="water_pumpStatus">●</span>
+                    Water Pump
+                </button>
+                <button onclick="toggleActuator('humidifier')" id="humidifierBtn">
+                    <span class="status-indicator" id="humidifierStatus">●</span>
+                    Humidifier
+                </button>
+                <button onclick="toggleActuator('cooling_fan')" id="cooling_fanBtn">
+                    <span class="status-indicator" id="cooling_fanStatus">●</span>
+                    Cooling Fan
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
