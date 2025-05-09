@@ -63,42 +63,6 @@ web_server_plant_monitoring/
 |-- xgboost_plant_health.pkl
 ```
 
-## Installation and Setup
-
-### Server Requirements
-```
-pip install -r requirements.txt
-```
-
-Key dependencies:
-- Flask
-- Flask-SocketIO
-- PyMySQL
-- NumPy
-- eventlet
-- scikit-learn
-- xgboost
-
-### Database Setup
-1. Create a MySQL database
-2. Configure database credentials in `.env` file:
-```
-DB_HOST=localhost
-DB_USER=your_username
-DB_PASSWORD=your_password
-DB_NAME=plant_monitoring
-```
-
-### ESP32 Setup
-1. Install required libraries in Arduino IDE:
-   - Blynk
-   - DHT sensor library
-   - AccelStepper
-   - ArduinoJson
-   - WebSocketsClient
-2. Update WiFi credentials and Blynk authentication token
-3. Configure the ngrok URL for server communication
-
 ## Usage
 
 ### Starting the Server
@@ -150,19 +114,5 @@ Default thresholds for automated control:
 
 These thresholds can be adjusted in the `config.py` file.
 
-## Troubleshooting
-
-### Common Issues
-- **Database Connection Errors**: Verify database credentials in `.env` file
-- **Sensor Reading Failures**: Check sensor connections and power supply
-- **WebSocket Disconnections**: Ensure server is accessible through the configured URL
-- **ESP32 Connectivity Issues**: Verify WiFi signal strength and credentials
-
 ### Logs
 Check server logs for detailed error messages and system status.
-
-
-
-## License
-
-[MIT License](LICENSE)
